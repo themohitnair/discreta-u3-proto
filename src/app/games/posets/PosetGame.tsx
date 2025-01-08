@@ -7,11 +7,9 @@ import ReactFlow, {
   MiniMap,
   Node,
   Edge,
-  addEdge,
   useNodesState,
   useEdgesState,
   Connection,
-  Position,
   BackgroundVariant,
 } from "reactflow";
 import "reactflow/dist/style.css";

@@ -7,11 +7,9 @@ import ReactFlow, {
   MiniMap,
   Node,
   Edge,
-  addEdge,
   useNodesState,
   useEdgesState,
   Connection,
-  Position,
   BackgroundVariant,
 } from "reactflow";
 import "reactflow/dist/style.css";
@@ -311,8 +309,8 @@ export function LatticeGame() {
     // In a bounded lattice, there should be a global minimum (bottom) and a global maximum (top).
     // "Bottom" is an element from which we can reach all others, 
     // "Top" is an element which can be reached from all others.
-    let bottomCandidates: string[] = [];
-    let topCandidates: string[] = [];
+    const bottomCandidates: string[] = [];
+    const topCandidates: string[] = [];
 
     lattice.forEach((el) => {
       // To check if "el" might be bottom: from "el" we can reach all others (directly or indirectly).
